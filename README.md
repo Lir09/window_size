@@ -22,7 +22,7 @@ Run the following command to install the required packages:
 
 pip install pyside6 pywin32 psutil
 
-Build Instructions
+# Build Instructions
 To distribute the program as an executable file:
 
 Install pyinstaller: Run the following command to install pyinstaller:
@@ -39,7 +39,7 @@ Locate the executable: The executable file will be created in the dist folder wi
 
 Distribute: Share the executable file located in the dist folder. Ensure that the target system meets the program's requirements.
 
-Usage Instructions
+# Usage Instructions
 
 1. Run the program (double-click the executable file or execute the Python script).
 2. Select the window you want to resize from the Select Window dropdown menu.
@@ -49,17 +49,17 @@ Usage Instructions
 # License
 This project is licensed under the MIT License. You are free to use, modify, and distribute the code, provided that proper credit is given to the original author.
 
-References and Resources
+# References and Resources
 PySide6: https://pyside.org/
 pywin32: https://github.com/mhammond/pywin32
 psutil: https://github.com/giampaolo/psutil
 
-Version and Updates
+# Version and Updates
 Current Version: 1.0.0
 Update History:
 1.0.0: Initial release
 
-FAQ
+# FAQ
 1. The program is not working. What should I do?
 Ensure Python and the required dependencies are correctly installed.
 Try running the program with administrator privileges.
