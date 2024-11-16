@@ -50,6 +50,7 @@ Distribute: Share the executable file located in the dist folder. Ensure that th
 This project is licensed under the MIT License. You are free to use, modify, and distribute the code, provided that proper credit is given to the original author.
 
 # References and Resources
+
 PySide6: https://pyside.org/
 pywin32: https://github.com/mhammond/pywin32
 psutil: https://github.com/giampaolo/psutil
