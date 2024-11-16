@@ -52,13 +52,10 @@ This project is licensed under the MIT License. You are free to use, modify, and
 # References and Resources
 
 PySide6: https://pyside.org/
-pywin32: https://github.com/mhammond/pywin32
-psutil: https://github.com/giampaolo/psutil
 
-# Version and Updates
-Current Version: 1.0.0
-Update History:
-1.0.0: Initial release
+pywin32: https://github.com/mhammond/pywin32
+
+psutil: https://github.com/giampaolo/psutil
 
 # FAQ
 1. The program is not working. What should I do?
