@@ -9,20 +9,20 @@ class WindowResizerApp(QWidget):
     def __init__(self):
         super().__init__()
 
-        # 윈도우 GUI 구성
+        # Configuring Windows GUI
         self.setWindowTitle("Window Resizer")
         self.setGeometry(100, 100, 300, 200)
 
         layout = QVBoxLayout()
 
-        # 실행 중인 프로세스 목록에서 창 제목 가져오기
+        # Import window title from running process list
         self.process_label = QLabel("Select Window:")
         self.process_dropdown = QComboBox(self)
         self.load_processes()
         layout.addWidget(self.process_label)
         layout.addWidget(self.process_dropdown)
 
-        # 크기 입력
+        # Enter Size
         self.width_label = QLabel("Width:")
         self.width_input = QLineEdit(self)
         layout.addWidget(self.width_label)
@@ -33,7 +33,7 @@ class WindowResizerApp(QWidget):
         layout.addWidget(self.height_label)
         layout.addWidget(self.height_input)
 
-        # 크기 조절 버튼
+        # Sizing button
         self.resize_button = QPushButton("Resize Window", self)
         self.resize_button.clicked.connect(self.resize_window)
         layout.addWidget(self.resize_button)
@@ -41,9 +41,9 @@ class WindowResizerApp(QWidget):
         self.setLayout(layout)
 
     def load_processes(self):
-        """실행 중인 모든 창을 열거하여 해당 창을 드롭다운에 추가"""
+        """List all running windows and add them to the dropdown"""
         def callback(hwnd, extra):
-            """EnumWindows 콜백 함수. 창 핸들과 제목을 처리."""
+            """EnumWindows callback function that handles window handles and titles."""
             if win32gui.IsWindowVisible(hwnd) and win32gui.GetWindowText(hwnd):
                 _, pid = win32process.GetWindowThreadProcessId(hwnd)
                 process = psutil.Process(pid)
@@ -53,13 +53,13 @@ class WindowResizerApp(QWidget):
         win32gui.EnumWindows(callback, None)
 
     def resize_window(self):
-        # 선택된 창 핸들과 너비, 높이 값
+        # Selected Window Handle, Width, Height Values
         hwnd = self.process_dropdown.currentData()
         width = int(self.width_input.text())
         height = int(self.height_input.text())
 
         if hwnd:
-            # 창 크기 조절
+            # Window size adjustment
             win32gui.SetWindowPos(hwnd, 0, 0, 0, width, height, win32con.SWP_NOMOVE | win32con.SWP_NOZORDER)
         else:
             print("Window not found!")
