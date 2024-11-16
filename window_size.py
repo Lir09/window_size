@@ -1,6 +1,6 @@
 import sys
 import win32gui
-import win32con  # win32con을 추가해야 합니다.
+import win32con
 import win32process
 import psutil
 from PySide6.QtWidgets import QApplication, QWidget, QVBoxLayout, QLabel, QComboBox, QLineEdit, QPushButton
