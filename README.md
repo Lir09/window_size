@@ -32,6 +32,7 @@ pip install pyinstaller
 Build the executable: Navigate to the directory containing the script and run the following command:
 
 pyinstaller --onefile --noconsole main.py
+
 --onefile: Packages the program into a single executable file.
 --noconsole: Hides the console window when running the application.
 Locate the executable: The executable file will be created in the dist folder within the project directory.
@@ -39,12 +40,13 @@ Locate the executable: The executable file will be created in the dist folder wi
 Distribute: Share the executable file located in the dist folder. Ensure that the target system meets the program's requirements.
 
 Usage Instructions
+
 1. Run the program (double-click the executable file or execute the Python script).
 2. Select the window you want to resize from the Select Window dropdown menu.
 3. Enter the desired width and height in the Width and Height fields.
 4. Click the Resize Window button to instantly adjust the selected window's size.
 
-License
+# License
 This project is licensed under the MIT License. You are free to use, modify, and distribute the code, provided that proper credit is given to the original author.
 
 References and Resources
